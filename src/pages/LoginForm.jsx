@@ -31,8 +31,16 @@ export default function LoginForm() {
       navigate("/dashboard");
     } catch (err) {
       // TODO 3: guardar un mensaje de error legible
-      const msg = err.response?.data?.error || "Error al iniciar sesión. Verifica tus datos.";
-    setError(msg);
+      const errorData = err.response?.data;
+
+      // Nos aseguramos de obtener un string comprobando las propiedades típicas o haciendo fallback
+      const msg = 
+        typeof errorData === "string" ? errorData :
+        errorData?.message || 
+        errorData?.error || 
+        "Error al iniciar sesión. Verifica tus datos.";
+
+      setError(msg);
     } finally {
       setLoading(false);
     }
