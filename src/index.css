@@ -1,0 +1,90 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0a0e27;
+  color: #eaf0ff;
+}
+
+.auth-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 360px;
+  background: #131a42;
+  border: 1px solid #2b3568;
+  border-radius: 14px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-card h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.auth-sub {
+  margin: 0 0 20px;
+  color: #93a0ce;
+  font-size: 13.5px;
+}
+
+.auth-card label {
+  font-size: 12px;
+  color: #93a0ce;
+  margin-top: 10px;
+}
+
+.auth-card input {
+  background: #1a2354;
+  border: 1px solid #2b3568;
+  color: #eaf0ff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.auth-card input:focus {
+  outline: 2px solid #00c2a8;
+  outline-offset: 1px;
+}
+
+.auth-card button {
+  margin-top: 20px;
+  background: #00c2a8;
+  color: #04241f;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-card button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.auth-error {
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid #8a2e2e;
+  color: #ff9b9b;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin: 12px 0 0;
+}
